@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Reset Hostinger Password</title>
+    <link rel="icon" type="image/x-icon" href="img-campur/logo-inko-2.png">
+    <link href="css/forgotpw.css" rel="stylesheet">
+    <link href="css/login.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="header">
+        <img src="img-campur/logo-inko-2.png" alt="Hostinger Logo">
+        <a href="index.html" class="back-button">Back to Home</a>
+    </div>
+
+     <!--------===== PRE LOAD===========------->
+ <div class="preloaderBg" id="preloader">
+    <div class="preloader"></div>
+    <div class="preloader2"></div>
+    <div class="dots" style="animation-delay: 0s;"></div>
+    <div class="dots" style="animation-delay: 0.5s;"></div>
+    <div class="dots" style="animation-delay: 1s;"></div>
+    <div class="dots" style="animation-delay: 1.5s;"></div>
+  </div>
+    <!---------======= ENDD========------>
+
+     <!------======APK========---------->
+
+        
+     <div class="icons">
+        <div class="icon download-apk" onclick="openDownloadPage()">
+            <img src="img-campur/logo-inko-2.png
+            " alt="Download APK">
+            <span>Download APK</span>
+        </div>
+    </div>
+</div>
+
+
+
+<!--------========END APK============------>
+
+
+ <!---icon samping whatsapp&instagram---->
+
+ <a href="https://www.instagram.com/infoinko/" class="float instagram" target="_blank">
+    <img width="40px" height="40px" src="img-campur/icon_igg-removebg-preview.png" alt="fa-instagram">
+</a>
+<a href="https://api.whatsapp.com/send/?phone=6285691919127&text=Saya+ingin+mengetahui+lebih+lanjut+tentang+INKO&type=phone_number&app_absent=0" class="float btn-floating pulse" target="_blank">
+    <img width="40px" height="40px" class="my-float" src="img-campur/wa remove.png" alt="icons8-whatsapp-24">
+</a>
+
+<!-----------==========LiveChat========----------->
+
+
+<div class="chat-button" onclick="toggleChat()">
+    <div class="chat-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24"><path d="M20 2H4C2.9 2 2 2.9 2 4V20L6 16H20C21.1 16 22 15.1 22 14V4C22 2.9 21.1 2 20 2ZM20 14H5.17L4 15.17V4H20V14Z"></path></svg>
+    </div>
+    <div class="chat-text">Chat</div>
+</div>
+
+<div id="chatNotification" class="chat-notification" onclick="toggleChat()"> Ada yang bisa kami bantu?</div>
+
+<div class="chat-popup" id="chatPopup">
+    <div class="chat-header">
+        <span>Chat / Kirim Pesan</span>
+        <button onclick="toggleChat()">×</button>
+    </div>
+    <div id="chatForm">
+        <form class="chat-form">
+            <label for="name">Nama</label>
+            <input type="text" id="name" name="name">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email">
+            <label for="department">Pilih departemen (opsional)</label>
+            <select id="department" name="department">
+                <option value="">-</option>
+                <option value="sales">Sales</option>
+                <option value="support">Support</option>
+            </select>
+            <label for="message">Pesan</label>
+            <textarea id="message" name="message"></textarea>
+            <button type="button" onclick="startChat()">Mulai percakapan</button>
+        </form>
+    </div>
+    <div id="chatConversation" style="display: none;">
+        <div class="conversation-container">
+            <div class="message received">
+                <div class="message-content">
+                    Selamat Datang Di INKO! Ada yang bisa kami bantu?
+                </div>
+            </div>
+        </div>
+        <form class="chat-form" onsubmit="sendMessage(event)">
+            <textarea id="chatMessage" name="chatMessage" placeholder="Ketik pesan..."></textarea>
+            <button type="submit">Kirim</button>
+        </form>
+    </div>
+</div>
+
+<!-----======END LiveChat---------========-->
+
+
+<div class="container">
+    <div class="content">
+        <div id="login" class="d-flex justify-content-center align-items-center flex-column position-relative">
+            <div class="w-100 mb-20">
+                <div class="text-center mb-25 w-100">
+                    <img src="img-campur/reset pw.png" class="w-100" alt="Reset password">
+                </div>
+                <h3 class="mb-25 text-center title">Reset Your Password</h3>
+                <span class="social-login-block w-100"></span>
+                <form method="post" action="reset_password.php" class="d-flex justify-content-center align-items-center flex-column w-100 text-center">
+                    <input type="hidden" name="_token" value="HRFdAQ2AcHSybaNDVyaTyHfgrWXgPjceIZgus5OU" autocomplete="off">                    
+                    <div class="mb-25 w-100">
+                        <input id="email-input" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" name="email" type="email" autocomplete="email" class="input color-black" placeholder="Email" data-qa="email-input" required>
+
+                        <input style="display: none !important" id="backup-email-input" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" name="backup_email" type="email" autocomplete="email" class="input color-black" placeholder="Backup Email">
+                    </div>
+                    <button type="submit" class="mb-25 w-100 primary-action background-color-hostinger" data-qa="send-reset-email-button">Send Reset Email</button>
+
+                    <button style="display: none !important" id="backup-email-toggle-button" class="mb-25 button secondary-action color-hostinger">Use Backup Email</button>
+                </form>
+                <div class="text-center color-black">
+                    <a href="login.html" class="mb-25 underline fs-12 color-black-50" data-qa="back-to-login-link">Back to log in form</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/reset.js"></script>
+<script src="js/preloader.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>

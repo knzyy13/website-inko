@@ -1,0 +1,161 @@
+
+  
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+input#searchInput {
+    display: block;
+    margin: 0 auto 2em;
+    padding: 0.5em;
+    width: 80%;
+    max-width: 500px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.filter-category {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.filter-category button {
+    background: #333;
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    margin: 0 0.5em;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.filter-category button:hover {
+    background: #555;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: center;
+}
+
+.product {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1em;
+    width: calc(25% - 2em);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    max-width: 100%;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0;
+}
+
+.product h3 {
+    margin: 0.5em 0;
+    color: black;
+}
+
+.product p {
+    margin: 0.5em 0;
+}
+
+.product a {
+    display: inline-block;
+    margin-top: 1em;
+    padding: 0.5em 1em;
+    background: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .product {
+        width: calc(50% - 2em);
+    }
+}
+
+@media (max-width: 480px) {
+    .product {
+        width: calc(100% - 2em);
+    }
+}
+
+h4{
+    color: black;
+}
+
+.features .nav-link {
+    border: 1px solid #d4d6df;
+    padding: 20px;
+    transition: 0.3s;
+    color: #141416;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 50px;
+ 
+  
+  }
+  
+  .features .nav-link h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  .features .nav-link:hover {
+    background: #ef6603;
+    color: #fff;
+    border-color: #ef6603;
+  }
+  
+ 
+  
+  .features .small-icon {
+    height: 60px;
+    width: 60px;
+    margin-right: 15px;
+  }
+  
+  @media (max-width: 768px) {
+    .features .nav-link {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .features .small-icon {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }

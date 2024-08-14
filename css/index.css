@@ -1,0 +1,396 @@
+/* Container untuk solusi */
+.container-solusi {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 50px;
+}
+
+/* Styling umum untuk bagian */
+.section {
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+/* Styling untuk text-section */
+.text-section {
+    background-color: #fff;
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.text-section h2 {
+    font-size: 20px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.text-section h1 {
+    font-size: 36px;
+    color: #000;
+    margin: 10px 0;
+    line-height: 1.2;
+}
+
+.text-section .blue {
+    color: #3498db;
+    font-size: 36px;
+}
+
+/* Styling untuk image-section */
+.image-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-section img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+.overlay h2 {
+    margin: 0;
+    font-size: 24px;
+    color: white;
+}
+
+.overlay .learn-more {
+    margin: 0;
+    font-size: 14px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+    color: #fff;
+}
+
+.overlay .learn-more:hover {
+    text-decoration: underline;
+    color: #3498db;
+}
+
+/* Responsiveness */
+@media (min-width: 768px) {
+    .text-section {
+        flex: 1 1 50%;
+    }
+
+    .image-section {
+        flex: 1 1 calc(25% - 16px);
+    }
+}
+
+@media (min-width: 1024px) {
+    .text-section {
+        flex: 1 1 40%;
+    }
+
+    .image-section {
+        flex: 1 1 calc(30% - 16px);
+    }
+}
+
+
+.section.inko {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align items to the left */
+    padding: 20px;
+    overflow: hidden;
+    width: 100%;
+    height: 60vh;
+    margin-top: 120px;
+    box-sizing: border-box;
+}
+
+.section.inko img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left center; /* Adjust the position of the image */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.section.inko .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align overlay content to the left */
+    text-align: left; /* Align text to the left */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.section.inko .content {
+    position: relative;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    z-index: 2;
+    max-width: 100%;
+}
+
+.section.inko .content h2 {
+    font-size: 25px;
+    margin: 0 0 10px 0;
+    font-weight: normal;
+    color: white;
+    text-align: left; /* Ensure h2 is left-aligned */
+}
+
+.section.inko .content h1 {
+    font-size: 50px;
+    margin: 0;
+    line-height: 1.2;
+    font-weight: bold;
+    color: white;
+    text-align: left; /* Ensure h1 is left-aligned */
+}
+
+@media (max-width: 1200px) {
+    .section.inko {
+        height: 50vh;
+        margin-top: 60px;
+    }
+
+    .section.inko .content h1 {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section.inko {
+        height: 40vh;
+        margin-top: 30px;
+    }
+
+    .section.inko .content h1 {
+        font-size: 28px;
+    }
+}
+
+
+/* Container untuk artikel */
+.article-container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding-bottom: 50px;
+}
+
+/* Styling untuk judul utama */
+.article-container h1 {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 30px;
+    color: #333;
+    margin-top: 100px;
+    font-weight: bold;
+}
+
+/* Grid untuk artikel */
+.article-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px; /* Tambahkan jarak antar item artikel */
+}
+
+/* Styling untuk setiap item artikel */
+.article-item {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin: 20px 0;
+    width: calc(33.333% - 20px); /* Lebar item artikel diatur menjadi sepertiga dari lebar grid dengan memperhitungkan gap */
+    padding: 20px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+}
+
+.article-item:hover {
+    transform: translateY(-5px); /* Efek hover untuk item artikel */
+}
+
+/* Styling untuk gambar artikel */
+.article-item img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+/* Styling untuk konten artikel */
+.article-content {
+    padding: 0;
+}
+
+/* Styling untuk tanggal dan waktu artikel */
+.article-date-time {
+    background-color: #3481d3;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 3px;
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+/* Styling untuk judul artikel */
+.article-content a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.article-content h2 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: #333;
+    line-height: 1.4;
+}
+
+.article-content h2:hover {
+    text-decoration: underline;
+}
+
+/* Styling untuk paragraf artikel */
+.article-content p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Responsivitas */
+@media (max-width: 992px) {
+    .article-item {
+        width: calc(50% - 20px); /* Lebar item artikel menjadi 50% pada layar medium */
+    }
+}
+
+@media (max-width: 768px) {
+    .article-item {
+        width: 100%; /* Lebar item artikel menjadi 100% pada layar kecil */
+    }
+}
+
+/* General Header Styling */
+.custom-header {
+    margin: 100px 0 20px; /* Combines margin-top and margin-bottom */
+    text-align: center;
+  }
+  
+  .custom-header-title {
+    font-size: 2em;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .custom-header-description {
+    color: #666;
+    margin-bottom: 5px; /* Adjusts spacing between paragraphs */
+  }
+  
+  /* Content Section Styling */
+  .custom-content-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    position: relative;
+    gap: 20px; /* Adds space between cards */
+  }
+  
+  /* Individual Card Styling */
+  .custom-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    width: 23%;
+    margin: 50px 0 100px; /* Combines margin-top and margin-bottom */
+    position: relative;
+  }
+  
+  .custom-card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Image Styling */
+  .custom-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Overlay Styling */
+  .custom-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .custom-card:hover .custom-overlay {
+    opacity: 1;
+  }
+  
+  /* Button Styling */
+  .custom-view-details-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 1200px) {
+    .custom-card {
+      width: 45%; /* Adjusts card width for smaller screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .custom-card {
+      width: 100%; /* Stacks cards vertically on small screens */
+    }
+  
+    .custom-content-section {
+      justify-content: center; /* Centers the single column of cards */
+    }
+  }
+  

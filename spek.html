@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Spesifikasi</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img-campur/logo-inko-2.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/spek.css" rel="stylesheet">
+</head>
+
+<body>
+   <!--------===== PRE LOAD===========------->
+ <div class="preloaderBg" id="preloader">
+    <div class="preloader"></div>
+    <div class="preloader2"></div>
+    <div class="dots" style="animation-delay: 0s;"></div>
+    <div class="dots" style="animation-delay: 0.5s;"></div>
+    <div class="dots" style="animation-delay: 1s;"></div>
+    <div class="dots" style="animation-delay: 1.5s;"></div>
+  </div>
+    <!---------======= ENDD========------>
+
+      <!------======APK========---------->
+
+        
+      <div class="icons">
+        <div class="icon download-apk" onclick="openDownloadPage()">
+            <img src="img-campur/logo-inko-2.png
+            " alt="Download APK">
+            <span>Download APK</span>
+        </div>
+    </div>
+</div>
+
+
+
+<!--------========END APK============------>
+
+
+ <!---icon samping whatsapp&instagram---->
+
+ <a href="https://www.instagram.com/infoinko/" class="float instagram" target="_blank">
+    <img width="40px" height="40px" src="img-campur/icon_igg-removebg-preview.png" alt="fa-instagram">
+</a>
+<a href="https://api.whatsapp.com/send/?phone=6285691919127&text=Saya+ingin+mengetahui+lebih+lanjut+tentang+INKO&type=phone_number&app_absent=0" class="float btn-floating pulse" target="_blank">
+    <img width="40px" height="40px" class="my-float" src="img-campur/wa remove.png" alt="icons8-whatsapp-24">
+</a>
+
+<!-----------==========LiveChat========----------->
+
+
+<div class="chat-button" onclick="toggleChat()">
+    <div class="chat-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24"><path d="M20 2H4C2.9 2 2 2.9 2 4V20L6 16H20C21.1 16 22 15.1 22 14V4C22 2.9 21.1 2 20 2ZM20 14H5.17L4 15.17V4H20V14Z"></path></svg>
+    </div>
+    <div class="chat-text">Chat</div>
+</div>
+
+<div id="chatNotification" class="chat-notification" onclick="toggleChat()"> Ada yang bisa kami bantu?</div>
+
+<div class="chat-popup" id="chatPopup">
+    <div class="chat-header">
+        <span>Chat / Kirim Pesan</span>
+        <button onclick="toggleChat()">×</button>
+    </div>
+    <div id="chatForm">
+        <form class="chat-form">
+            <label for="name">Nama</label>
+            <input type="text" id="name" name="name">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email">
+            <label for="department">Pilih departemen (opsional)</label>
+            <select id="department" name="department">
+                <option value="">-</option>
+                <option value="sales">Sales</option>
+                <option value="support">Support</option>
+            </select>
+            <label for="message">Pesan</label>
+            <textarea id="message" name="message"></textarea>
+            <button type="button" onclick="startChat()">Mulai percakapan</button>
+        </form>
+    </div>
+    <div id="chatConversation" style="display: none;">
+        <div class="conversation-container">
+            <div class="message received">
+                <div class="message-content">
+                    Selamat Datang Di INKO! Ada yang bisa kami bantu?
+                </div>
+            </div>
+        </div>
+        <form class="chat-form" onsubmit="sendMessage(event)">
+            <textarea id="chatMessage" name="chatMessage" placeholder="Ketik pesan..."></textarea>
+            <button type="submit">Kirim</button>
+        </form>
+    </div>
+</div>
+
+<!-----======END LiveChat---------========-->
+
+
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-light d-none d-lg-block">
+        <div class="row align-items-center top-bar">
+            <div class="col-lg-3 col-md-12 text-center text-lg-start">
+                <a href="" class="navbar-brand m-0 p-0">
+                    <img src="img-campur/logo-inko-2.png" alt="">
+                </a>
+            </div>
+            <div class="col-lg-9 col-md-12 text-end">
+                <div class="h-100 d-inline-flex align-items-center me-4">
+                    <i class="fa fa-map-marker-alt text-primary me-2"></i>
+                    <p class="m-0">Jl. Tampak Siring Blok KJJ 14-15 Jakarta Barat
+
+                    </p>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center me-4">
+                    <i class="far fa-envelope-open text-primary me-2"></i>
+                    <p class="m-0">info@cpd-inko.com</p>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center">
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href="https://www.facebook.com/profile.php?id=100091214207459" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href="https://api.whatsapp.com/send/?phone=6285691919127&text=Saya+ingin+mengetahui+lebih+lanjut+tentang+INKO&type=phone_number&app_absent=0" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href="https://www.youtube.com/@infoinko2136" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-0" href="https://www.instagram.com/infoinko/" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid nav-bar bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white p-3 py-lg-0 px-lg-4">
+            <a href="" class="navbar-brand d-flex align-items-center m-0 p-0 d-lg-none">
+                <img src="img-campur/logo-inko-2.png" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav me-auto">
+                    <a href="index.html" class="nav-item nav-link">Beranda</a>
+                    <a href="produk.html" class="nav-item nav-link active">Produk</a>
+                    <a href="artikel.html" class="nav-item nav-link">Artikel</a>
+                    <div class="nav-item dropdown">
+                        <a href="../project-web-inko/hubungikami.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                        <div class="dropdown-menu fade-up m-0">
+                            <a href="tentangkami.html" class="dropdown-item">Tentang Kami</a>
+                            <a href="team.html" class="dropdown-item">Team INKO</a>
+                            <a href="hotsale.html" class="dropdown-item">HOT SALES</a>
+                            <a href="video.html" class="dropdown-item">Video</a>
+                        </div>
+                    </div>
+                    <a href="hubungikami.html" class="nav-item nav-link">Contact</a>
+                </div>
+                <div class="d-flex align-items-center">
+                    <div class="me-lg-n4 py-3 px-4 bg-primary d-flex align-items-center">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 45px; height: 45px;">
+                            <i class="fa fa-phone-alt text-primary"></i>
+                        </div>
+                        <div class="ms-3">
+                            <p class="mb-1 text-white">Emergency</p>
+                            <h5 class="m-0 text-secondary">021-29028970</h5>
+                        </div>
+                    </div>
+                    <div class="custom-login-btn-container">
+                        <a href="login.html" class="custom-btn-login">Login</a>
+                    </div>
+                    
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- DEMO MESIN -->
+    <section class="promo-section">
+        <div class="promo-overlay"></div>
+        <div class="promo-container">
+            <div class="promo-content mx-auto">
+                <h2 class="promo-heading">DEMO MESIN SEKARANG!!!</h2>
+                <p class="promo-text">Dapatkan pengalaman mencoba mesin-mesin kami sekarang juga.</p>
+                <div class="promo-button">
+                    <a href="hubungikami.html" class="btn">Hubungi Kami</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!----END-------->
+
+    <!-----SPEK PRODUK------->
+
+    <div class="spek-container">
+        <div class="image">
+            <img src="https://inko.id/assets/images/produks/20220304115147.webp" alt="INKO CP1040" width="500px" height="400px">
+        </div>
+        <div class="spek-container">
+            <ul class="specs">
+                <li><strong>Sistem:</strong></li>
+                <li><strong>Resolusi: </strong>1.200 dpi x 1.200 dpi x 8 bit; setara dengan 3600 dpi</li>
+                <li><strong>Berat kertas: </strong>62 hingga 350 gsm</li>
+                <li><strong>Unit Duplex: </strong> Type non-stack; 62-350 gsm</li>
+                <li><strong>Ukuran kertas:</strong> 330 mm x 487 mm; 330 mm x 1.300 mm</li>
+                <li><strong>Image area:</strong> 323 mm x 480 mm; 323 mm x 1.295 mm maksimal (Banner)</li>
+                <li><strong>Kapasitas input kertas:</strong> Standard: 1.500 lembar; maksimal 15.390 lembar</li>
+                <li><strong>Kapasitas output kertas:</strong> Maksimal: 13.600 lembar</li>
+                <li><strong>Dimensi main unit:</strong> 800x903x1.076 mm (WxDxH)</li>
+                <li><strong>Berat main unit:</strong> 319 kg</li>
+                <li><strong>Produktifitas:</strong></li>
+                <li>A4-maksimal per menit: 100 ppm</li>
+                <li>A3-maksimal per menit: 53 ppm</li>
+                <li><strong>Controller:</strong></li>
+                <li>INKO Controller: IC-604</li>
+                <li>Brosur: <a href="https://drive.google.com/file/d/1iHOC4LJ8TUW-bMHgBVDOGhfekcSXN5Ar/view?pli=1">Klik untuk download</a></li>
+            </ul>
+       
+        </div>
+    </div>
+
+            </div>
+            </div>
+        </div>
+      
+    
+
+
+    
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Kunjungi Kami</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Jl. Tampak Siring Blok KJJ 14-15
+                        Pusat Bisnis Daan Mogot Baru Kali Deres
+                        Jakarta Barat</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i> 021-29028970 / 021-29028971</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@cpd-inko.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Jam Buka</h4>
+                    <h6 class="text-light">Senin - Jum'at:</h6>
+                    <p class="mb-4">09.00 - 16.00</p>
+                    <h6 class="text-light">Sabtu:</h6>
+                    <p class="mb-0">09.00 - 14:00</p>
+                    <br>
+                    <h6 class="text-light">Minggu:</h6>
+                    <p class="mb-0">Tutup</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Tautan Bermanfaat</h4>
+                    <a class="btn btn-link" href="index.html">Beranda</a>
+                    <a class="btn btn-link" href="produk.html">Produk</a>
+                    <a class="btn btn-link" href="video.html">Video</a>
+                    <a class="btn btn-link" href="hubungikami.html">Hubungi Kami</a>
+                    <a class="btn btn-link" href="tentangkami.html">Tentang Kami</a>
+                    <a class="btn btn-link" href="team.html">Team INKO</a>
+                    <a class="btn btn-link" href="login.html">Login</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Newsletter</h4>
+                    <p>Subscribe untuk mendapatkan semua berita dan artikel di inbox email kamu.</p>
+                    <div class="position-relative mx-auto" style="max-width: 400px;">
+                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">Copyright 2019</a>, Reserved by INKO.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                        Designed By <a class="border-bottom" href="https://api.whatsapp.com/send/?phone=6287762853824&text=Saya+ingin+mengetahui+lebih+lanjut+tentang+INKO&type=phone_number&app_absent=0" target="_blank">Achmad Habibi</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script src="js/preloader.js"></script>
+</body>
+
+</html>

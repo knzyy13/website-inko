@@ -1,0 +1,175 @@
+.promo-section {
+    position: relative;
+    padding: 60px 0;
+    background: url('https://asset-2.tstatic.net/jatim/foto/bank/images/Cocok-Buat-Industri-Kreatif-Astragraphia-Rilis-Mesin-Printer-Berwarna-Terbaru-Ini-3-Keunggulannya.jpg') no-repeat center center;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+    min-height: 300px;
+}
+
+.promo-section .promo-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.promo-section .promo-container {
+    position: relative;
+    z-index: 2;
+}
+
+.promo-section .promo-content {
+    position: relative;
+    z-index: 3;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.promo-section .promo-heading {
+    font-size: 2.25rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.promo-section .promo-text {
+    font-size: 1.125rem;
+    margin-bottom: 30px;
+}
+
+.promo-section .promo-button {
+    margin-top: 20px;
+}
+
+.promo-section .btn {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.promo-section .btn:hover {
+    background-color: #0056b3;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about, .team {
+    margin: 50px 0;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.about iframe {
+    width: 100%;
+    max-width: 560px;
+    height: 300px; /* Menyesuaikan tinggi secara proporsional */
+    aspect-ratio: 16 / 9; /* Menjaga rasio aspek video */
+}
+
+.about-text {
+    padding: 20px;
+    text-align: center;
+}
+
+.about-text h2, .about-text p {
+    margin: 20px 0;
+}
+
+.team-members {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.member {
+    flex: 1 1 100%;
+    max-width: 300px;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.member img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+.member h3 {
+    margin: 10px 0;
+}
+
+.member p {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons img {
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+}
+
+.team-title {
+    color: rgb(0, 0, 0);
+    border-bottom: 2px solid blue;
+    display: inline-block;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.section {
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+}
+
+#team-inko {
+    margin-top: 100px;
+}
+
+@media (min-width: 768px) {
+    .about-content {
+        flex-direction: row;
+    }
+
+    .team-members {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .member {
+        flex: 1 1 20%;
+    }
+}

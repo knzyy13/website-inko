@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Artikel</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img-campur/logo-inko-2.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/artikel.css" rel="stylesheet">
+</head>
+
+<body>
+   <!--------===== PRE LOAD===========------->
+ <div class="preloaderBg" id="preloader">
+    <div class="preloader"></div>
+    <div class="preloader2"></div>
+    <div class="dots" style="animation-delay: 0s;"></div>
+    <div class="dots" style="animation-delay: 0.5s;"></div>
+    <div class="dots" style="animation-delay: 1s;"></div>
+    <div class="dots" style="animation-delay: 1.5s;"></div>
+  </div>
+    <!---------======= ENDD========------>
+
+      <!------======APK========---------->
+
+        
+      <div class="icons">
+        <div class="icon download-apk" onclick="openDownloadPage()">
+            <img src="img-campur/logo-inko-2.png
+            " alt="Download APK">
+            <span>Download APK</span>
+        </div>
+    </div>
+</div>
+
+
+
+<!--------========END APK============------>
+
+
+ <!---icon samping whatsapp&instagram---->
+
+ <a href="https://www.instagram.com/infoinko/" class="float instagram" target="_blank">
+    <img width="40px" height="40px" src="img-campur/icon_igg-removebg-preview.png" alt="fa-instagram">
+</a>
+<a href="https://api.whatsapp.com/send/?phone=6285691919127&text=Saya+ingin+mengetahui+lebih+lanjut+tentang+INKO&type=phone_number&app_absent=0" class="float btn-floating pulse" target="_blank">
+    <img width="40px" height="40px" class="my-float" src="img-campur/wa remove.png" alt="icons8-whatsapp-24">
+</a>
+
+<!-----------==========LiveChat========----------->
+
+
+<div class="chat-button" onclick="toggleChat()">
+    <div class="chat-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24"><path d="M20 2H4C2.9 2 2 2.9 2 4V20L6 16H20C21.1 16 22 15.1 22 14V4C22 2.9 21.1 2 20 2ZM20 14H5.17L4 15.17V4H20V14Z"></path></svg>
+    </div>
+    <div class="chat-text">Chat</div>
+</div>
+
+<div id="chatNotification" class="chat-notification" onclick="toggleChat()"> Ada yang bisa kami bantu?</div>
+
+<div class="chat-popup" id="chatPopup">
+    <div class="chat-header">
+        <span>Chat / Kirim Pesan</span>
+        <button onclick="toggleChat()">×</button>
+    </div>
+    <div id="chatForm">
+        <form class="chat-form">
+            <label for="name">Nama</label>
+            <input type="text" id="name" name="name">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email">
+            <label for="department">Pilih departemen (opsional)</label>
+            <select id="department" name="department">
+                <option value="">-</option>
+                <option value="sales">Sales</option>
+                <option value="support">Support</option>
+            </select>
+            <label for="message">Pesan</label>
+            <textarea id="message" name="message"></textarea>
+            <button type="button" onclick="startChat()">Mulai percakapan</button>
+        </form>
+    </div>
+    <div id="chatConversation" style="display: none;">
+        <div class="conversation-container">
+            <div class="message received">
+                <div class="message-content">
+                    Selamat Datang Di INKO! Ada yang bisa kami bantu?
+                </div>
+            </div>
+        </div>
+        <form class="chat-form" onsubmit="sendMessage(event)">
+            <textarea id="chatMessage" name="chatMessage" placeholder="Ketik pesan..."></textarea>
+            <button type="submit">Kirim</button>
+        </form>
+    </div>
+</div>
+
+<!-----======END LiveChat---------========-->
+
+
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-light d-none d-lg-block">
+        <div class="row align-items-center top-bar">
+            <div class="col-lg-3 col-md-12 text-center text-lg-start">
+                <a href="" class="navbar-brand m-0 p-0">
+                    <img src="img-campur/logo-inko-2.png" alt="">
+                </a>
+            </div>
+            <div class="col-lg-9 col-md-12 text-end">
+                <div class="h-100 d-inline-flex align-items-center me-4">
+                    <i class="fa fa-map-marker-alt text-primary me-2"></i>
+                    <p class="m-0">Jl. Tampak Siring Blok KJJ 14-15 Jakarta Barat
+
+                    </p>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center me-4">
+                    <i class="far fa-envelope-open text-primary me-2"></i>
+                    <p class="m-0">info@cpd-inko.com</p>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center">
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href="https://www.facebook.com/profile.php?id=100091214207459" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href="https://api.whatsapp.com/send/?phone=6285691919127&text=Saya+ingin+mengetahui+lebih+lanjut+tentang+INKO&type=phone_number&app_absent=0" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href="https://www.youtube.com/@infoinko2136" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-0" href="https://www.instagram.com/infoinko/" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid nav-bar bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white p-3 py-lg-0 px-lg-4">
+            <a href="" class="navbar-brand d-flex align-items-center m-0 p-0 d-lg-none">
+                <img src="img-campur/logo-inko-2.png" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav me-auto">
+                    <a href="index.html" class="nav-item nav-link">Beranda</a>
+                    <a href="produk.html" class="nav-item nav-link">Produk</a>
+                    <a href="artikel.html" class="nav-item nav-link active">Artikel</a>
+                    <div class="nav-item dropdown">
+                        <a href="../project-web-inko/hubungikami.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                        <div class="dropdown-menu fade-up m-0">
+                            <a href="tentangkami.html" class="dropdown-item">Tentang Kami</a>
+                            <a href="team.html" class="dropdown-item">Team INKO</a>
+                            <a href="hotsale.html" class="dropdown-item">HOT SALES</a>
+                            <a href="video.html" class="dropdown-item">Video</a>
+                        </div>
+                    </div>
+                    <a href="hubungikami.html" class="nav-item nav-link">Contact</a>
+                </div>
+                <div class="d-flex align-items-center">
+                    <div class="me-lg-n4 py-3 px-4 bg-primary d-flex align-items-center">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 45px; height: 45px;">
+                            <i class="fa fa-phone-alt text-primary"></i>
+                        </div>
+                        <div class="ms-3">
+                            <p class="mb-1 text-white">Emergency</p>
+                            <h5 class="m-0 text-secondary">021-29028970</h5>
+                        </div>
+                    </div>
+                    <div class="custom-login-btn-container">
+                        <a href="login.html" class="custom-btn-login">Login</a>
+                    </div>
+                    
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+
+   
+
+    <!-----ARTIKEL SELENGKAPNYA------->
+
+    
+
+    <div class="container">
+        <div class="main-content">
+            <div class="article">
+                <h2>Proyeksi Bisnis Digital Printing di tahun 2024.</h2>
+                <p><small><i>30 Maret, 2024 | 100jt tayangan | 10jt suka | Diposting oleh INKO | PRINTER NO 1 INDONESIA</i></small></p>
+                <img src="https://inko.id/assets/images/artikels/Img_645c99748371220230511152956.webp" alt="">
+                <p>
+                    <span class="highlight">JAKARTA - Proyek Bisnis</span>    Bisnis digital printing telah mengalami perkembangan pesat dalam beberapa tahun terakhir, dan proyeksi untuk tahun 2024 menunjukkan tren positif yang berkelanjutan. Dalam era digital, permintaan akan cetakan berkualitas tinggi dan hasil yang cepat semakin meningkat, menciptakan peluang yang menarik bagi bisnis digital printing. Faktor-faktor seperti cetak on-demand, teknologi cetak 3D, keberlanjutan, personalisasi, kemitraan strategis, dan inovasi produk akan memainkan peran kunci dalam menggambarkan bisnis digital printing pada tahun 2024.</span>
+                </p>
+        
+                <p style="font-weight: bold;"><strong>Pertumbuhan Ekonomi </strong></p>
+        
+                <p>Pasar digital printing diproyeksikan akan terus tumbuh dengan <strong> CAGR (Compound Annual Growth Rate)</strong> sekitar 6% hingga tahun 2024. Hal ini disebabkan oleh peningkatan permintaan akan produk cetak digital, termasuk promosi, periklanan, dan branding. </p>
+        
+                <p style="font-weight: bold;"><strong>Inovasi Teknologi </strong></p>
+            
+                <p>  Inovasi teknologi yang lebih baik dan lebih efisien akan terus muncul pada tahun 2024. Misalnya, teknologi <strong>digital printing</strong> yang ramah lingkungan dan biaya cetak yang lebih murah.</p> 
+        
+                <p style="font-weight: bold;"><strong>Personalisasi</strong></p>
+        
+                <p>
+                  Permintaan konsumen untuk produk yang disesuaikan dengan kebutuhan mereka akan terus meningkat. Ini akan memicu pertumbuhan bisnis digital printing pada tahun 2024, karena bisnis dapat menawarkan produk dan layanan yang disesuaikan dengan kebutuhan dan preferensi konsumen. 
+                </p>
+        
+                <p style="font-weight: bold;"><strong>Peningkatan Layanan Purna Jual</strong></p>
+        
+                <p>Layanan purna jual yang baik akan menjadi faktor penting dalam menarik konsumen. Peningkatan layanan purna jual pada bisnis digital printing pada tahun 2024 dapat membantu bisnis meningkatkan loyalitas konsumen dan meningkatkan citra merek.</p>
+        
+                <p style="font-weight: bold;"><strong>Permintaan yang Meningkat</strong></p>
+                
+               <p>Salah satu proyeksi utama untuk bisnis digital printing pada tahun 2024 adalah peningkatan permintaan akan layanan tersebut. Masyarakat semakin membutuhkan akses cepat dan efisien untuk cetakan berkualitas tinggi dalam berbagai aspek kehidupan mereka. Permintaan akan cetakan promosi, materi pemasaran, bahan iklan, cetakan pribadi, cetakan seni, dan banyak lagi akan terus meningkat seiring dengan pertumbuhan bisnis dan kebutuhan pribadi. Hal ini mendorong bisnis digital printing untuk terus mengembangkan kreativitas, kualitas, dan layanan yang lebih baik.</p>
+        
+               <p style="font-weight: bold;"><strong>Cetak On-demand</strong></p>
+        
+              <p>Tren utama dalam bisnis digital printing pada tahun 2024 adalah adanya peningkatan permintaan untuk cetak on-demand atau produksi sesuai permintaan. Konsumen modern ingin memperoleh produk dengan cepat dan sesuai dengan keinginan mereka, tanpa harus menunggu lama atau memesan dalam jumlah besar. Dalam hal ini, bisnis digital printing memiliki keunggulan dalam memenuhi kebutuhan ini dengan kemampuan produksi yang fleksibel. Dengan teknologi digital, cetak on-demand dapat dilakukan dengan cepat dan efisien, memungkinkan pelanggan untuk mendapatkan produk mereka dalam waktu singkat tanpa mengorbankan kualitas.</p>
+        
+              <p style="font-weight: bold;"><strong>Personalisasi dan Pengalaman Pelanggan</strong></p>
+        
+              <p>
+                Personalisasi akan terus menjadi tren yang signifikan dalam bisnis digital printing pada tahun 2024. Konsumen menginginkan produk yang disesuaikan dengan preferensi dan kebutuhan mereka. Bisnis digital printing harus menyediakan layanan personalisasi yang mudah digunakan dan memungkinkan pelanggan untuk mendesain produk mereka sendiri. Ini bisa meliputi pilihan desain, ukuran, kertas, jenis cetakan, dan lainnya. Personalisasi yang efektif dapat meningkatkan keterlibatan pelanggan dan menciptakan ikatan emosional dengan merek.
+              </p>
+        
+              <p style="font-weight: bold;"><strong>Kemitraan Strategis</strong></p>
+        
+              <p>Pada tahun 2024, kemitraan strategis akan menjadi aspek penting dalam mengembangkan bisnis digital printing. Menggandeng mitra seperti perusahaan desain, agensi pemasaran, penyedia platform e-commerce, dan pemilik merek terkenal dapat membuka pintu untuk pasar yang lebih luas dan peluang pertumbuhan yang signifikan. Kemitraan semacam ini dapat memperluas jangkauan bisnis digital printing dan memungkinkan kolaborasi dalam mengembangkan produk inovatif. Selain itu, kemitraan dengan penyedia teknologi cetak terkemuka juga penting untuk menjaga keunggulan kompetitif. Dengan mengadopsi teknologi terbaru dan terbaik, bisnis digital printing dapat memperluas kemampuan produksi, meningkatkan kualitas cetakan, dan mengurangi biaya produksi.</p>
+        
+               <img src="https://inko.id/assets/images/artikels/Img_645c9957ba30720230511152927.webp" alt="">
+        
+               <p> Proyeksi bisnis digital printing pada tahun 2024 menunjukkan peluang yang menarik dan pertumbuhan yang berkelanjutan. Permintaan yang meningkat, cetak on-demand, teknologi cetak 3D, keberlanjutan, personalisasi, kemitraan strategis, dan inovasi produk akan menjadi faktor kunci dalam menggambarkan bisnis digital printing di masa depan. Bisnis yang mampu mengadopsi tren ini, menyediakan pengalaman pelanggan yang unggul, dan tetap berinovasi akan memiliki keunggulan kompetitif yang kuat dan peluang pertumbuhan yang menjanjikan.</p>
+        
+               <iframe width="640" height="360" style="
+               margin-left: 60px;" src="https://www.youtube.com/embed/39oU0Gafmmk" title="Proyeksi Bisnis Digital Printing di tahun 2024" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+               
+            </div>
+        </div>
+    
+       
+          
+      <div class="sidebar">
+        <div class="search-container">
+        <input type="text" class="search-input" id="searchInput" placeholder="Search Here...">
+        <button class="search-button" onclick="searchArticles()">
+            <img src="https://w7.pngwing.com/pngs/471/149/png-transparent-computer-icons-symbol-search-miscellaneous-black-and-white-magnifying-glass.png" alt="Search Icon">
+        </button>
+    </div>
+    <div id="searchResults"></div>
+        <div class="latest-news">
+          <h3>Berita Terbaru</h3>
+          <div class="news-item">
+            <img src="https://inko.id//assets/images/artikels/Img_667d095507bc920240627134021.webp" alt="Berita Basket NBA">
+            <p><small><i>26 Juni, 2024 | 80k tayangan | 10k suka</i></small></p>
+            <p>Revolusi stiker label dan mesin label di masa depan; Mengapa permintaan meningkat tajam?</p>
+          </div>
+          <div class="news-item">
+            <img src="https://inko.id//assets/images/artikels/Img_667240e22520d20240619092226.webp" alt="Memilih Laptop">
+            <p><small><i>25 Mei, 2024 | 100k tayangan | 500k suka</i></small></p>
+            <p>Langkah-langkah kustom Mockup produk di photoshop CC 2019.</p>
+          </div>
+          <div class="news-item">
+            <img src="https://inko.id//assets/images/artikels/Img_66544bb4459a320240527160036.webp" alt="Berpikir Kreatif">
+            <p><small><i>6 Mei, 2024 | 50k tayangan | 290k suka</i></small></p>
+            <p>Pentingnya presisi warna pada aplikasi percetakan.</p>
+          </div>
+          <div class="news-item">
+            <img src="https://inko.id//assets/images/artikels/Img_65fa6b557792720240320115133.webp" alt="Olahraga Rutin">
+            <p><small><i>20 Maret, 2024 | 25k tayangan | 5k suka</i></small></p>
+            <p>Mengungkap peran penting label printing dalam dunia bisnis modern.</p>
+          </div>
+          <div class="news-item">
+            <img src="https://inko.id//assets/images/artikels/Img_657bc5e3e64b320231215102003.webp" alt="Memilih Sekolah">
+            <p><small><i>15 Desember, 2023 | 20k tayangan | 1k suka</i></small></p>
+            <p>Keamanan Cetak dan Anti-Pemalsuan: Meningkatkan Proteksi melalui Teknologi Digital Printing.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  
+    
+    
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Kunjungi Kami</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Jl. Tampak Siring Blok KJJ 14-15
+                        Pusat Bisnis Daan Mogot Baru Kali Deres
+                        Jakarta Barat</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i> 021-29028970 / 021-29028971</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@cpd-inko.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/infoinko/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/profile.php?id=100091649330072" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/@infoinko2136" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://api.whatsapp.com/send/?phone=6285691919127&text=Saya+ingin+mengetahui+lebih+lanjut+tentang+INKO&type=phone_number&app_absent=0" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Jam Buka</h4>
+                    <h6 class="text-light">Senin - Jum'at:</h6>
+                    <p class="mb-4">09.00 - 16.00</p>
+                    <h6 class="text-light">Sabtu:</h6>
+                    <p class="mb-0">09.00 - 14:00</p>
+                    <br>
+                    <h6 class="text-light">Minggu:</h6>
+                    <p class="mb-0">Tutup</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Tautan Bermanfaat</h4>
+                    <a class="btn btn-link" href="index.html">Beranda</a>
+                    <a class="btn btn-link" href="produk.html">Produk</a>
+                    <a class="btn btn-link" href="video.html">Video</a>
+                    <a class="btn btn-link" href="hubungikami.html">Hubungi Kami</a>
+                    <a class="btn btn-link" href="tentangkami.html">Tentang Kami</a>
+                    <a class="btn btn-link" href="team.html">Team INKO</a>
+                    <a class="btn btn-link" href="login.html">Login</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Newsletter</h4>
+                    <p>Subscribe untuk mendapatkan semua berita dan artikel di inbox email kamu.</p>
+                    <div class="position-relative mx-auto" style="max-width: 400px;">
+                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">Copyright 2019</a>, Reserved by INKO.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                        Designed By <a class="border-bottom" href="https://api.whatsapp.com/send/?phone=6287762853824&text=Saya+ingin+mengetahui+lebih+lanjut+tentang+INKO&type=phone_number&app_absent=0" target="_blank">Achmad Habibi</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script src="js/preloader.js"></script>
+    <script src="js/artikel.js"></script>
+</body>
+
+</html>
