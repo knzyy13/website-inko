@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function preloader() {
     if (navigator.onLine) {
-      setTimeout(showPage, 2000); // Ubah waktu jika perlu
+      setTimeout(showPage, 300); // Ubah waktu jika perlu
     } else {
       // Cek koneksi setiap 3 detik
       checkConnection();
