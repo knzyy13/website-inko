@@ -154,7 +154,7 @@
     <!-- Topbar End -->
 
 
-    <!-- Navbar Start -->
+      <!-- Navbar Start -->
     <div class="container-fluid nav-bar bg-light">
         <nav class="navbar navbar-expand-lg navbar-light bg-white p-3 py-lg-0 px-lg-4">
             <a href="" class="navbar-brand d-flex align-items-center m-0 p-0 d-lg-none">
@@ -169,31 +169,38 @@
                     <a href="produk.html" class="nav-item nav-link">Produk</a>
                     <a href="artikel.html" class="nav-item nav-link">Artikel</a>
                     <div class="nav-item dropdown">
-                        <a href="" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
-                        <div class="dropdown-menu fade-up m-0">
-                            <a href="tentangkami.html" class="dropdown-item">Profil Perusahaan</a>
-                            <a href="team.html" class="dropdown-item active">Team INKO</a>
-                            <a href="hotsale.html" class="dropdown-item">HOT SALES</a>
-                            <a href="video.html" class="dropdown-item">Video</a>
-                        </div>
+                        <a href="#" class="nav-link dropdown-toggle active" id="pagesDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                            Pages
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="pagesDropdown">
+                            <li><a href="tentangkami.html" class="dropdown-item">Tentang Kami</a></li>
+                            <li><a href="team.html" class="dropdown-item active">Team INKO</a></li>
+                            <li><a href="hotsale.html" class="dropdown-item">HOT SALES</a></li>
+                            <li><a href="video.html" class="dropdown-item">Video</a></li>
+                        </ul>
                     </div>
+                    
                     <a href="hubungikami.html" class="nav-item nav-link">Contact</a>
                 </div>
-                <div class="mt-4 mt-lg-0 me-lg-n4 py-3 px-4 bg-primary d-flex align-items-center">
-                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 45px; height: 45px;">
-                        <i class="fa fa-phone-alt text-primary"></i>
+                <div class="d-flex align-items-center">
+                    <div class="me-lg-n4 py-3 px-4 bg-primary d-flex align-items-center">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 45px; height: 45px;">
+                            <i class="fa fa-phone-alt text-primary"></i>
+                        </div>
+                        <div class="ms-3">
+                            <p class="mb-1 text-white">Emergency</p>
+                            <h5 class="m-0 text-secondary">021-29028970</h5>
+                        </div>
                     </div>
-                    <div class="ms-3">
-                        <p class="mb-1 text-white">Emergency</p>
-                        <h5 class="m-0 text-secondary">021-29028970 </h5>
+                    <div class="custom-login-btn-container">
+                        <a href="login.html" class="custom-btn-login">Login</a>
                     </div>
+                    
                 </div>
-            </div>
-            <div class="custom-login-btn-container">
-                <a href="login.html" class="custom-btn-login">Login</a>
             </div>
         </nav>
     </div>
+    
     <!-- Navbar End -->
 
 
