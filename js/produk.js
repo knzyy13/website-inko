@@ -132,6 +132,15 @@ const products = [
     img: "https://inko.id/assets/images/produks/20221003153134.webp",
     link: "spek15.html"
   },
+
+    {
+    id: "product15",
+    name: "Mesin Printing A3+ INKO CP-1245 INKO CP-1445",
+    category: "printer",
+    description: "Mesin Printing A3+ INKO CP-1245 dan INKO CP-1445 adalah jenis printer komersial yang biasa digunakan untuk mencetak dokumen atau gambar dengan ukuran A3+ (lebih besar dari ukuran kertas A3).",
+    img: "https://inko.id/assets/images/produks/20240826121047.webp",
+    link: "spek16.html"
+  },
     // Tambahkan produk lainnya hingga mencapai 15 produk
   ];
   
